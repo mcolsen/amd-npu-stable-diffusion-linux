@@ -1,0 +1,21 @@
+# Runtime dependencies for xdna2-npu-diffusion.
+#
+# ONNX Runtime is intentionally NOT listed here — it must be the custom build
+# shipped with the Ryzen AI SDK (which registers the VitisAI EP and matches
+# libonnx_custom_ops.so). setup.sh copies it out of the SDK into the venv.
+#
+# PyTorch is installed in a separate pip invocation (see setup.sh) because it
+# needs the CPU-only index URL.
+
+numpy<2
+transformers>=4.30
+diffusers==0.31.0
+safetensors
+Pillow
+huggingface_hub
+
+# nputop provides NPU telemetry (clocks, power mode, hardware contexts).
+# Optional at runtime — diagnostics.py degrades gracefully if the import
+# fails — but installing it unlocks per-step CSV telemetry.
+# Override with NPUTOP_PATH=/path/to/local/clone ./setup.sh for a local editable install.
+nputop @ git+https://github.com/mcolsen/nputop.git

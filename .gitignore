@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Local setup artifacts (created by setup.sh)
+lib/
+models/
+
+# Generated output
+output*.png
+generated_images/
+
+# Telemetry (diagnostics.py writes to ~/.cache by default, but if users
+# override XDNA_CACHE_DIR to the repo root, these patterns keep it out of git)
+telemetry/
+*.csv
+
+# Editor / tooling
+.claude/
+.vscode/
+.idea/
