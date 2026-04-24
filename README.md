@@ -243,4 +243,6 @@ xdna2-npu-diffusion/
 ## Acknowledgments
 
 - **AMD** for publishing the pre-compiled DynamicDispatch ONNX models on
-  Hugging Face and the Ryzen AI SDK runtime.
+  Hugging Face and the Ryzen AI SDK runtime, as well as for the [Windows-only
+  implementation](https://github.com/amd/sd-sandbox) that got me wondering
+  if I could get this working on Linux. 
